@@ -1,3 +1,5 @@
 # 阿森纳万岁
 
-通过QBImagePicker库自定义UICollectionView来获取系统相册的相片
+通过使用QBImagePicker库自定义UICollectionView来获取系统相册的相片
+
+QQ:727122354

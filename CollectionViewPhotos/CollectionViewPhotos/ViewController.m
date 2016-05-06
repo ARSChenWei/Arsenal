@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "MyCollectionVliew.h"
+#import "CWLayout.h"
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 
 @interface ViewController ()
+@property(nonatomic,strong)MyCollectionVliew * CollectionView;
 
 @end
 
@@ -16,7 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    self.CollectionView = [[MyCollectionVliew alloc]initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 120) collectionViewLayout:[[CWLayout alloc]init]];
+    [self.view addSubview:self.CollectionView];
+    
+    UIButton * button = [[UIButton alloc]init];
+    button.frame = CGRectMake(0, 250, 100, 100);
+    [button setTitle:@"查看数据源" forState:0];
+    [button addTarget:self action:@selector(ButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor redColor];
+    [self.view addSubview:button];
+}
+
+-(void)ButtonClick
+{
+    NSLog(@"~~~~~~查看照片数据源:%d",self.CollectionView.PhotoArray.count);
 }
 
 - (void)didReceiveMemoryWarning {
