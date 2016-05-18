@@ -33,6 +33,8 @@
     [button addTarget:self action:@selector(ButtonClick) forControlEvents:UIControlEventTouchUpInside];
     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
+    
+    NSLog(@"点击测试英文Git客户端");
 }
 
 -(void)ButtonClick
