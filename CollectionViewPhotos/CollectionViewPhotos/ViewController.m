@@ -34,6 +34,7 @@
     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
     
+    NSLog(@"测试github的桌面客户端");
     NSLog(@"点击测试英文Git客户端");
 }
 
