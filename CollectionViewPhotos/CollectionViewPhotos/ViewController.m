@@ -36,6 +36,10 @@
     
     NSLog(@"测试github的桌面客户端");
     NSLog(@"点击测试英文Git客户端");
+    
+    
+    
+    NSLog(@"github测试地址");
 }
 
 -(void)ButtonClick
